@@ -1,0 +1,61 @@
+1)
+var myvar
+
+2)
+myvar = 10
+10
+
+3)
+var soma = 15 + 8
+
+4)
+soma = soma + 1
+24
+
+5)
+soma = soma * 3
+72
+
+6)
+Valor da variavel soma = 72
+
+7)
+var souninja = true
+
+8)
+var comida = ["arroz", "feijão", "ovo"]
+
+9)
+comida[1]
+"feijão"
+
+10)
+if (soma === myvar){
+    console.log("É igual")
+}else{
+    console.log("Não é igual")
+}
+
+VM2337:4 Não é igual
+
+11)
+if (myvar <= soma){
+    console.log("É menor")
+}else{
+    console.log("Não é igual")
+}
+
+VM2409:2 É menor
+
+12)
+function divisao(num1, num2){
+    if (num1 >= num2){
+    return num1 / num2
+    }else{
+    return num2 / num1
+    }
+}
+
+13)
+divisao(10,2)
+5

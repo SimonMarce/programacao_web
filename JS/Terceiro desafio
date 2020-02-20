@@ -151,7 +151,178 @@ var pessoa = {
     }
 }
 
-undefined
+8)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    nomeCompleto : function(){
+        console.log("Olá! Meu nome é " + this.nome + " " + this.sobrenome)
+    },
+    sexo : "Masculino",
+    idade : 17,
+    mostrarIdade : function(){
+        console.log("Olá, eu tenho " + this.idade + " anos!")
+    },
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    peso : 70,
+    mostrarPeso : function(){
+        console.log("Olá! meu peso é " + this.peso + " Kg")
+    },
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10
+        andando : true
+        console.log("Andando : " + true ) 
+        return this.metrosCaminhados + metros++
+    },
+    parar : function(){
+        console.log("Andando : " + false)
+    }
+}
+
+9)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    nomeCompleto : function(){
+        console.log("Olá! Meu nome é " + this.nome + " " + this.sobrenome)
+    },
+    sexo : "Masculino",
+    idade : 17,
+    mostrarIdade : function(){
+        console.log("Olá, eu tenho " + this.idade + " anos!")
+    },
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    mostrAltura : function(){
+        console.log("Olá, eu tenho " + this.altura + " Metros")
+    },
+    peso : 70,
+    mostrarPeso : function(){
+        console.log("Olá! Meu nome é " + this.peso + " Kg")
+    },
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10
+        andando : true
+        console.log("Andando : " + true ) 
+        return this.metrosCaminhados + metros++
+    },
+    parar : function(){
+        console.log("Andando : " + false)
+    }
+}
+
+10)
+pessoa.nomeCompleto()
+//Olá! Meu nome é Irving Cesar
+
+11)
+pessoa.mostrarPeso()
+//VM1170:21 Olá! Meu nome é 70 Kg
+
+12)
+pessoa.mostrAltura()
+//Olá, eu tenho 1.91 Metros
+
+13)
 pessoa.mostrarIdade()
-VM911:10 Olá, eu tenho 17 anos!
+//Olá, eu tenho 17 anos!
+
+14)
+pessoa.data()
+18
+pessoa.data()
+19
+pessoa.data()
+20
+//Tem 20 anos
+
+15)
+pessoa.andar()
+Andando : true
+18
+pessoa.andar()
+Andando : true
+37
+pessoa.andar()
+Andando : true
+57
+
+16)
+//sim
+
+17)
+pessoa.parar()
+Andando : false
+
+18)
+//não
+
+19)
+//três metros
+
+20)
+var pessoa = {
+    apresentacao : function(){
+        if(this.sexo==="Masculino" && this.idade!==1 && this.metrosCaminhados!==1){ 
+            console.log("Olá, eu sou o " + this.nome + " " + this.sobrenome + ", tenho " + this.idade + " anos, " + this.altura + ", meu peso é " + this.peso + " e, só hoje, eu já caminhei " + this.andar() + " metros")
+        }
+        if(this.sexo==="Masculino" && this.idade===1 && this.metrosCaminhados!==1){
+            console.log("Olá, eu sou o " + this.nome + " " + this.sobrenome + ", tenho " + this.idade + " ano, " + this.altura + ", meu peso é " + this.peso + " e, só hoje, eu já caminhei " + this.andar() + " metros")
+        }
+        if(this.sexo==="Masculino" && this.idade!==1 && this.metrosCaminhados===1){
+            console.log("Olá, eu sou o " + this.nome + " " + this.sobrenome + ", tenho " + this.idade + " anos, " + this.altura + ", meu peso é " + this.peso + " e, só hoje, eu já caminhei " + this.andar() + " metro")
+        }
+    }, 
+    nome : "Irving",
+    sobrenome : "Cesar",
+    nomeCompleto : function(){
+        console.log("Olá! Meu nome é " + this.nome + " " + this.sobrenome)
+    },
+    sexo : "Masculino",
+    idade : 17,
+    mostrarIdade : function(){
+        console.log("Olá, eu tenho " + this.idade + " anos!")
+    },
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    mostrAltura : function(){
+        console.log("Olá, eu tenho " + this.altura + " Metros")
+    },
+    peso : 70,
+    mostrarPeso : function(){
+        console.log("Olá! Meu nome é " + this.peso + " Kg")
+    },
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10,
+        andando = true,
+        console.log("Andando : " + true )
+        return this.metrosCaminhados + metros++
+    },
+    parar : function(){
+        console.log("Andando : " + false)
+    }
+}
+
+21)
+pessoa.apresentacao()
+VM3291:39 Andando : true
+VM3291:4 Olá, eu sou o Irving Cesar, tenho 17 anos, 1.91, meu peso é 70 e, só hoje, eu já caminhei 13 metros
+
+
+
+
+
 

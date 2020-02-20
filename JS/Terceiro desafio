@@ -1,0 +1,97 @@
+1)
+Var vazio = {} //objeto vazio
+
+2)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    sexo : "Masculino",
+    idade : 17,
+    altura : 1.91,
+    peso : 70,
+    andando : false, // variavel booleana
+    metrosCaminhados : 0 // 0 como padrão
+}
+
+3)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    sexo : "Masculino",
+    idade : 17,
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    peso : 70,
+    andando : false, // variavel booleana
+    metrosCaminhados : 0 // 0 como padrão
+}
+pessoa.data()  //rodando o código
+17
+pessoa.data()
+18
+pessoa.data()
+19
+
+
+4)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    sexo : "Masculino",
+    idade : 17,
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    peso : 70,
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10
+        andando : true
+        console.log("Andando : " + true ) 
+        return this.metrosCaminhados + metros++
+    }
+}
+
+undefined
+pessoa.andar()
+VM6118:16 Andando : true
+63
+pessoa.andar()
+VM6118:16 Andando : true
+64
+pessoa.andar()
+VM6118:16 Andando : true
+65
+
+5)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    sexo : "Masculino",
+    idade : 17,
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    peso : 70,
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10
+        andando : true
+        console.log("Andando : " + true ) 
+        return this.metrosCaminhados + metros++
+    },
+    parar : function(){
+        console.log("Andando : " + false)
+    }
+}
+
+pessoa.parar()
+VM6241:20 Andando : false
+
+6)

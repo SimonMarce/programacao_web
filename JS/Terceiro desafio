@@ -122,4 +122,36 @@ var pessoa = {
 }
 
 7)
+var pessoa = {
+    nome : "Irving",
+    sobrenome : "Cesar",
+    nomeCompleto : function(){
+        console.log("Olá! Meu nome é " + this.nome + " " + this.sobrenome)
+    },
+    sexo : "Masculino",
+    idade : 17,
+    mostrarIdade : function(){
+        console.log("Olá, eu tenho " + this.idade + " anos!")
+    },
+    data: function fazerAniversario(){  //Método
+    	return this.idade ++
+    }, 
+    altura : 1.91,
+    peso : 70,
+    andando : false, // variavel booleana
+    metrosCaminhados : 0, // 0 como padrão
+    andar : function(){
+        metros : 10
+        andando : true
+        console.log("Andando : " + true ) 
+        return this.metrosCaminhados + metros++
+    },
+    parar : function(){
+        console.log("Andando : " + false)
+    }
+}
+
+undefined
+pessoa.mostrarIdade()
+VM911:10 Olá, eu tenho 17 anos!
 

@@ -1,0 +1,115 @@
+//1)
+var isTruthy = function(valor){
+    if(valor===false){
+        return true
+    }else{
+        return false
+    }
+}
+
+
+//2)
+isTruthy(null)
+true
+isTruthy(false)
+true
+isTruthy(undefined)
+true
+isTruthy(0)
+true
+isTruthy(NaN)
+true
+isTruthy('')
+true
+
+
+//3)
+isTruthy(true)
+true
+isTruthy({})
+true
+isTruthy([])
+true
+isTruthy(42)
+true
+isTruthy("foo")
+true
+isTruthy(new Date())
+true
+isTruthy(-42)
+true
+isTruthy(3.14)
+true
+isTruthy(-3.14)
+true
+
+var carro = {
+    marca : "BMW",
+    obterMarca : function(){
+        return this.marca
+    },
+    modelo : "120i",
+    obterModelo : function(){
+        return this.modelo
+    },
+    obterMarcaModelo  : function(){
+        console.log("Esse carro é um " + this.obterMarca() + " " +this.obterModelo())
+    },
+    Placa : "PJG-2509",
+    ano : 2017,
+    cor : "Branco",
+    mudarCor : function(C){
+        return this.cor = C
+    },
+    obterCor : function(){
+        return this.cor
+    },
+    quantasPortas : 4,
+    assentos : 5,
+    quantidadeDePessoas : 0,
+    adcionarPessoas : function(_pessoas){
+        var verifica = 'pessoas'
+        if(this.quantidadeDePessoas + _pessoas > 5){
+            var sub = 5 - this.quantidadeDePessoas
+            if(sub<=1){
+                verifica = 'pessoa'
+                return 'Só cabem mais ' + sub + ' ' + verifica + ' no carro' 
+            }else{
+                return 'Só cabem mais ' + sub + ' ' + verifica + ' no carro'
+            }   
+        }
+        if(this.quantidadeDePessoas > 5){
+            return 'O carro já está lotado'
+        }else{
+            this.quantidadeDePessoas += _pessoas
+            return 'Já tem ' + this.quantidadeDePessoas + ' pessoas no carro'
+        }
+    }   
+}    
+ 
+
+//Resposta
+carro.cor
+//"Branco"
+carro.mudarCor('vermelho')
+//"vermelho"
+carro.cor
+//"vermelho"
+carro.mudarCor('Verde musgo')
+//"Verde musgo"
+carro.cor
+//"Verde musgo"
+carro.obterMarcaModelo()
+//Esse carro é um BMW 120i
+carro.adcionarPessoas(2)
+// "Já tem 2 pessoas no carro"
+carro.adcionarPessoas(4)
+// "Só cabem mais 3 pessoas no carro"
+carro.adcionarPessoas(3)
+// "Já tem 5 pessoas no carro"
+carro.adcionarPessoas(-4)
+// "Já tem 1 pessoas no carro"
+carro.adcionarPessoas(10)
+// "Só cabem mais 4 pessoas no carro"
+carro.quantidadeDePessoas
+// 1

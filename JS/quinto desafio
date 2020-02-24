@@ -1,0 +1,78 @@
+//1)
+var corpo = ['cabeça','perna','braço','boca','nariz']
+
+//2)
+function volta(matriz){
+    return matriz 
+}
+
+//3)
+volta(corpo[1])
+//'perna'
+
+//4)
+var planetas = ['terra','marte','jupiter','vênus','saturno']
+var num1 = 4
+function duvida(a1,a2){
+    return a1[a2]
+}
+duvida(planetas,4)
+//"saturno"
+
+//5)
+var seila = ['David',38,false,true,null]
+
+//6)
+for(i=0; i<5; i++){
+    console.log(duvida(seila,i))
+} 
+// David
+// 38
+// false
+// true
+// null
+
+
+//7)
+function book(nome){   
+    var livros = {
+        peterPan : {
+            quantidadeDePaginas : 350,
+            autor : 'Renayl',
+            editora : 'Gliinan'
+        },
+        crepusculo : {
+            quantidadeDePaginas : 200,
+            autor : 'Lilian',
+            editora : 'Fliscor'
+        },
+        pequenoPrincipe :{
+            quantidadeDePaginas : 190,
+            autor : 'Lesley',
+            editora : 'Canion'
+        }
+    }
+    if(nome===undefined){
+        return livros
+    }else{
+        return livros[nome]
+    }
+}
+
+//8)
+book("PeterPan")
+//{quantidadeDePaginas: 350, autor: "Renayl", editora: "Gliinan"}
+
+
+//9)
+console.log("O livro " + "PeterPan" + " tem " + book('peterPan').quantidadeDePaginas + " páginas ")
+//O livro PeterPan tem 350 páginas
+
+//10)
+console.log("O autor do livro " + "crepusculo" + " é " + book('crepusculo').autor)
+//O autor do livro crepusculo é Lilian
+
+
+//11)
+console.log("O livro " + "pequenoPrincipe" + " Foi publicado pela editora " + book('pequenoPrincipe').editora)
+//O livro pequenoPrincipe Foi publicado pela editora Canion

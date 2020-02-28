@@ -60,4 +60,41 @@ while(i<=30){
 
 
 //9)
+function convertToHex(cor){
+    switch(cor){
+        case 'vermelho':
+            console.log('O hexadecimal para a cor ' + cor + ' é: #ff0000')
+            break
+        case 'azul':
+            console.log('O hexadecimal para a cor ' + cor + ' é: #054f77')
+            break
+        case 'cinza':
+            console.log('O hexadecimal para a cor ' + cor + ' é: #1C1C1C')
+            break
+        case 'ciano':
+            console.log('O hexadecimal para a cor ' + cor + ' é: #00FFFF')
+            break
+        case 'verde':
+            console.log('O hexadecimal para a cor ' + cor + ' é: #90EE90')
+            break
+        default:
+            console.log("Não temos o equivalente hexadecimal para " + cor + ".")
+    }
+}
 
+convertToHex("vermelho")
+// O hexadecimal para a cor vermelho é: #ff0000
+convertToHex("verde")
+// O hexadecimal para a cor verde é: #90EE90
+convertToHex("cinza")
+// O hexadecimal para a cor cinza é: #1C1C1C
+convertToHex("ciano")
+// O hexadecimal para a cor ciano é: #00FFFF
+convertToHex("azul")
+// O hexadecimal para a cor azul é: #054f77
+convertToHex("branco")
+// Não temos o equivalente hexadecimal para branco.
+convertToHex("roxo")
+// Não temos o equivalente hexadecimal para roxo.
+convertToHex("laranja")
+//Não temos o equivalente hexadecimal para laranja.

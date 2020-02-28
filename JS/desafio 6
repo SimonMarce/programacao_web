@@ -1,0 +1,66 @@
+//1)
+var championShip = 'Campeonato Carioca'
+
+//2)
+console.console.log(championShip)
+//Camperonato Carioca
+
+//3)
+var teams = ['Flamengo',' Fluminese',' Boa vista',' Resende',' Bota Fogo.']
+
+//4)
+console.log('Times que estão participando do campeonato ' + teams)
+//Times que estão participando do campeonato: Flamengo, Fluminese, Boa vista, Resende, Bota Fogo.
+
+//5)
+var teams = [undefined,'Flamengo',' Fluminese',' Boa vista',' Resende',' Bota Fogo.']
+
+function ShowTeamPosition(num){
+    if(num<=5){
+        teams[num]
+        console.log('O time que está em ' + num + '° lugar é ' + teams[num])
+    }else{
+        console.log('Não temos a informção do time que está nessa posição')
+    }
+}
+
+//6)
+ShowTeamPosition(1)
+// O time que está em 1° lugar é Flamengo
+ShowTeamPosition(2)
+// O time que está em 2° lugar é  Fluminese
+ShowTeamPosition(3)
+// O time que está em 3° lugar é  Boa vista
+ShowTeamPosition(4)
+// O time que está em 4° lugar é  Resende
+
+
+//7)
+var adicionar = teams.push('Bangu')
+teams
+//[undefined, "Flamengo", " Fluminese", " Boa vista", " Resende", " Bota Fogo.", "Bangu"]
+
+
+//8)
+var i = 20
+while(i<=30){
+    console.log(i++)
+}
+// 20
+// 21
+// 22
+// 23
+// 24
+// 25
+// 26
+// 27
+// 28
+// 29
+// 30
+
+
+//9)
+function convertToHex(cor){
+    a = cor + ' ' 
+    return cor
+}

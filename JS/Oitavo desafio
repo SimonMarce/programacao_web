@@ -1,0 +1,67 @@
+var sum = function calculateSum(num1,num2){
+    soma = num1 + num2
+    return  'A soma de '+num1 +" e "+ num2 + ' é: ' + soma
+     
+}
+sum(1,5)
+//"A soma de 1 e 5 é: 6"
+
+console.log("O nome da função que fez a soma acima foi " + sum.name)
+//O nome da função que fez a soma acima foi calculateSum
+
+function showName(){
+    return 'Irving'
+}
+//"Irving"
+
+var varShowName = showName
+
+console.log("A função " + varShowName.name + " retorna " + showName())
+//A função showName retorna Irving
+
+var calculator = function(tipo){
+    function numero(n1,n2){
+        ajudante = tipo
+        switch (ajudante) {
+            case '+':
+                console.log(n1+n2)
+                break;
+
+            case '-':
+                console.log(n1-n2)
+                break;
+
+            case '*':
+                console.log(n1*n2)
+                break;
+
+            case '/':
+                console.log(n1/n2)
+                break;
+
+            case '%':
+                console.log(n1%n2)
+                break;
+
+            default:
+                console.log("operação inválida")
+        }
+    }
+    return numero
+}
+
+var sum = calculator('+')
+console.log(sum(4,4))
+//8
+var subtracion = calculator('-')
+console.log(subtracion(4,4))
+//0
+var multiplicacion = calculator('*')
+console.log(multiplicacion(4,4))
+//16
+var division = calculator('/')
+console.log(division(4,4))
+//1
+var mod = calculator('%')
+console.log(mod(4,4))
+//0

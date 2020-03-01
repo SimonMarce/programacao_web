@@ -1,0 +1,66 @@
+(function(){
+
+    //myFunction
+    function myFunction() {
+        var number1 = 10;
+        var number2 = 20;
+        console.log( 'Na função `myFunction`, o primeiro número é', number1 );
+        console.log( 'Na função `myFunction`, o segundo número é', number2 );
+        // var number1 = 10;
+        return number1 + number2;
+        // var number2 = 20;
+        }
+    myFunction();
+
+    //myFunction2
+    function myFunction2() {
+        var number1 = 10;
+        var number2 = 20;
+        //return sum();
+        var sum = function sum() {
+        return number1 + number2;
+        };
+        console.log( 'A soma de 10 e 20 é igual a' , sum ? sum() : undefined );
+        // var sum = function sum() {
+        // return number1 + number2;
+        // };
+        // var number1 = 10;
+        // var number2 = 20;
+        // return sum();
+    }
+    myFunction2();
+
+    //myFunction3
+    function myFunction3() {
+        var number2 = 50;
+        var number1 = 40;
+        console.log( 'A soma de 40 e 50 é igual a', sum() );
+    //     var number2 = 50;
+        console.log( 'Na função myFunction3, number1 é igual a', number1 );
+    //     var number1 = 40;
+    //     return sum();
+        function sum() {
+        return number1 + number2;
+        };
+    //     return sum();
+    }
+    myFunction3();
+
+    function calculator(n1,n2){
+        return function(callBack){
+            return callBack(n1,n2)
+        }
+    }
+    
+    var sum = calculator(4,4)
+    
+    console.log("O resultado da soma é : " +sum(function(n1,n2){return n1+n2}))
+    //O resultado da soma é : 8
+    console.log("O resultado da multiplicação é : " +sum(function(n1,n2){return n1*n2}))
+    //O resultado da multiplicação é : 16
+    console.log("O resultado da divisão é : " +sum(function(n1,n2){return n1/n2}))
+    //O resultado da divisão é : 1
+    console.log("O resto da divisão é : " +sum(function(n1,n2){return n1%n2}))
+    //O resto da divisão é : 0
+  
+}())

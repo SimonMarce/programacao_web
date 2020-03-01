@@ -1,0 +1,77 @@
+var elementoPostit = document.querySelector("#Postit")
+var adicionarpostit = document.createElement("button")
+var textoBotao = document.createTextNode("Adicionar Postit")
+var textoBotao2 = document.createTextNode("Remover Postit")
+var textoBotao3 = document.createTextNode("Restaurar Postit")
+var elementoInput = document.createElement("input")
+var removerPostit = document.createElement('button')
+var restaurarPostit = document.createElement('button')
+var outraDiv = document.createElement('div')
+//Criando um parágrafo
+var paragrafo = document.createElement("p")
+paragrafo.appendChild(document.createTextNode("Clique duas vezes para remover um postit"))
+//Botão remover postit
+removerPostit.appendChild(textoBotao2)
+elementoPostit.appendChild(removerPostit)
+//Botã orestaurar
+restaurarPostit.appendChild(textoBotao3)
+elementoPostit.appendChild(restaurarPostit)
+//Botão Adicionar Postit
+adicionarpostit.setAttribute("id","botao")
+adicionarpostit.appendChild(textoBotao)
+elementoPostit.appendChild(adicionarpostit)
+//Parágrafo "Clique duas vezs para remover..."
+elementoPostit.appendChild(elementoInput)
+elementoPostit.appendChild(paragrafo)
+//outra div
+elementoPostit.appendChild(outraDiv)
+outraDiv.setAttribute("id","outraDiv")
+adicionarpostit.onclick = function(){
+    criarPostit()
+}
+restaurarPostit.onclick = function(){
+    restaurarPT()
+}
+removerPostit.onclick = function(){
+    removerPT()
+}
+function criarPostit(){
+    var modelopostit = document.createElement("div")
+    modelopostit.setAttribute("id","surge")
+    modelopostit.onclick = function(){
+        modelopostit.style.backgroundColor= cor()
+    }
+    modelopostit.ondblclick = function(){
+        modelopostit.style.display = "none"
+    }
+    modelopostit.style.width = '200px'
+    modelopostit.style.height = '200px'
+    modelopostit.style.backgroundColor = cor()
+    modelopostit.style.textAlign = 'center'
+    modelopostit.style.border= 'solid 2px black'
+    modelopostit.style.alignItems = 'center'
+    modelopostit.style.alignContent = 'center'
+    modelopostit.style.justifyContent = 'center'
+    modelopostit.style.display = 'flex'
+    modelopostit.style.marginBottom= '5px'
+    // modelopostit.style.wordwrap = 'break-Word'
+
+    modelopostit.appendChild(document.createTextNode(elementoInput.value))
+    outraDiv.appendChild(modelopostit)
+}
+function restaurarPT(){
+    var restaurar = document.getElementById("outraDiv")
+    restaurar.style.display="block"
+}
+function removerPT(){
+    var restaurar = document.getElementById("outraDiv")
+    restaurar.style.display="none"
+}
+function cor(){
+    var letras = "0123456789ABCDEF"
+    var cor = "#"
+    for(var i=0;i<6;i++){
+        cor += letras[Math.floor(Math.random() *16)]
+    }
+    return cor
+}

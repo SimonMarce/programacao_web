@@ -1,0 +1,50 @@
+#foto-redonda{
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+}
+
+.fundo{
+    background-color: #1d7b97f6;
+}
+
+#estrela{
+    width: 150px;
+    height: 55px;
+}
+
+#traco{
+    width: 2000px;
+}
+
+table, td, tr, th {
+    text-align: center;
+}
+
+.input-group{display: inline;}
+
+.cadastro{
+    border: solid 1px  black;
+    border-radius: 10px 0px 10px 0px;
+    color: black;
+    width: 280px;;
+    margin-left: 600px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+input{
+    margin-left: 10px;
+    display: list-item;
+    width: 220px;
+    border-radius: 3px;
+}
+
+.btn-botao{
+    margin-top: 10px;
+    margin-left: 160px;
+}
+
+label{margin-top: 5px;}

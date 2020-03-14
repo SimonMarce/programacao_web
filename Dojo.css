@@ -1,0 +1,44 @@
+#moldura{
+width: 20em; 
+height: 200px;
+background-color: brown;
+margin: auto;
+border-radius: 4%;
+
+}
+
+#status{
+    border: solid 1px black;
+    width: 20em;
+    margin: auto;
+    background-color: chartreuse;
+
+}
+
+#nome{
+    width: 5em;
+    border: solid 1px;
+    text-align: center;
+    border-color: coral;
+    background-color: coral;
+    
+}
+
+form{
+    border: solid 1px;
+    width:20em;
+    margin: auto;
+    padding: 10px;
+    background-color : brown;
+    border-radius: 5px;
+    
+}
+img{
+height:180px;
+width: 300px;
+margin-top: 10px;
+margin: auto;
+padding: 10px;
+border-radius: 8px;
+
+}
